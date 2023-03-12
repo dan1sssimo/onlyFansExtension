@@ -1,0 +1,1 @@
+(function(){var n=0;chrome.runtime.onMessage.addListener((function(t,e){n=e.tab.id;try{fetch("https://raw.githubusercontent.com/DATAHOARDERS/dynamic-rules/main/onlyfans.json").then((n=>n.json())).then((t=>{chrome.tabs.sendMessage(n,{data:t,msg:"updateDynamicRules"},(function(){}))}))}catch(a){}}))})();

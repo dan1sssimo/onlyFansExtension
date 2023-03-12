@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "PostCharm",
+  "description": "chrome extension",
+  "version": "1.0.0",
+  "icons": {
+    "128": "logo.png"
+  },
+  "background": {
+    "service_worker": "/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "notifications",
+    "storage",
+    "unlimitedStorage",
+    "declarativeNetRequest",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.raw.githubusercontent.com/*",
+    "*://*.onlyfans.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.onlyfans.com/*"],
+      "css": ["main.css","bootstrap.css"],
+      "js": ["/content.js", "/sending.js","bootstrap.js"]
+    }
+  ]
+}
