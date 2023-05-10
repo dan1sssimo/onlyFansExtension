@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## License
+This project is licensed under [MIT] (License). 
+Details can be found in the file [LICENSE](LICENSE)
